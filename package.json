@@ -1,10 +1,52 @@
 {
   "name": "1touch",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "This small cli tool let's you create a file and a folder at the same time even if the underling folder structure doesn't exist yet.",
-  "main": "cli.js",
-  "repository": "https://github.com/Ikana/1touch",
-  "author": "Rodrigo Quezada (roderik.ikana@gmail.com)",
+  "author": "Rodrigo Quezada @Ikana",
+  "bin": {
+    "1touch": "./bin/run"
+  },
+  "bugs": "https://github.com/Ikana/1touch/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "mkdirp": "^1.0.4",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@types/mkdirp": "^1.0.1",
+    "@types/node": "^10",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "eslint-config-oclif-typescript": "^0.1",
+    "ts-node": "^8",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/Ikana/1touch",
+  "keywords": [
+    "oclif"
+  ],
   "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "1touch"
+  },
+  "repository": "Ikana/1touch",
+  "scripts": {
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts",
   "private": false
 }
