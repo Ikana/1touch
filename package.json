@@ -1,0 +1,10 @@
+{
+  "name": "1touch",
+  "version": "1.0.0",
+  "description": "This small cli tool let's you create a file and a folder at the same time even if the underling folder structure doesn't exist yet.",
+  "main": "cli.js",
+  "repository": "https://github.com/Ikana/1touch",
+  "author": "Rodrigo Quezada (roderik.ikana@gmail.com)",
+  "license": "MIT",
+  "private": false
+}
